@@ -24,9 +24,9 @@ libnemo_fileroller_la_CFLAGS += -DG_DISABLE_ASSERT -DG_DISABLE_CHECKS
 endif
 
 libnemo_fileroller_la_SOURCES = \
-	fileroller-module.c       \
-	nemo-fileroller.h       \
-	nemo-fileroller.c
+	ark-module.c       \
+	nemo-ark.h       \
+	nemo-ark.c
 
 libnemo_fileroller_la_LDFLAGS = -module -avoid-version
 libnemo_fileroller_la_LIBADD  = $(NEMO_LIBS) $(GLIB_LIBS)
