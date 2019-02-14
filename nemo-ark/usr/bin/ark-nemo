@@ -1,0 +1,9 @@
+#!/bin/bash
+decodeURL() {
+   printf "$(sed 's#^file://##;s/+/ /g;s/%\(..\)/\\x\1/g;' <<< "$@")\n";
+}
+
+cddir=$(decodeURL "$3")
+cd "$cddir"
+ark $@
+exit $?
